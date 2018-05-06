@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Faculty Portal</title>
+    <link rel="icon" href="photo/download.jpg" type="image/jpg"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<link rel="stylesheet" href="materialize/css/materialize.min.css"/>
+	<link rel="stylesheet" href="materialize/css/materialize.css"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<script src="js/jquery.js"></script>
+	<script src="materialize/js/materialize.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#submit").click(function(){
+				data = $('#uid').val();
+				if(data.indexOf('st')!=-1){
+					alert("this user is not allowed to login");
+					$('#loginform').submit();
+					return false;
+				}
+			});
+		});
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="#f5f5f5 grey lighten-4">
+
+	<div class="row #757575 grey darken-1">
+		<div class="row"></div>
+         <div class="col s12 center white-text">
+            <h3>Faculty Portal</h3>
+        </div>
+        <div class="row"></div>    
+     </div>
+     <div class="row"></div>
+     <div class="row"></div>
+     <div class="row"></div>
+     
+	<form action="login" id="loginform" method="post">
+    	<div class=" center container form1" style="width:500px;">
+		<div class="row center"><p style="color:red" class="center" id="error"></p></div>
+		<div class="row">
+			<div class="col s1"></div>
+			<div class="input-field col s10">
+				<i class="material-icons prefix">perm_identity</i>
+                                <input id="uid" name="uid" type="text" class="validate" maxlength="10" required>
+				<label for="uid">UserID</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s1"></div>
+			<div class="input-field col s10">
+				<i class="material-icons prefix">vpn_key</i>
+                                <input id="pwd" name="pwd" type="password" class="validate" maxlength="10" required>
+				<label for="pwd">PassWord</label>
+			</div>
+		</div>
+		<button class="btn waves-effect  grey darken-1" id="submit" type="submit" name="action">Login
+			<i class="material-icons right">send</i>
+		</button>
+		<div class="row"></div>
+		<div class="row">
+			<div class="col s2"></div>
+			<div class="col s4 "><a style="color:green" href="Registration.html">New Registration?</a></div>
+			<div class="col s4 "><a style="color:green" href="forgotpassword.html">Forgot password?</a></div>
+		</div>
+	</div>
+    </form>
+    <div class="row"></div>
+    <div class="row"></div>
+     <div class="row"></div>
+        <div class="page-footer  #757575 grey darken-1">
+          <div class="row"></div>
+           <div class="container">
+            <div class="row center">Copyright © 2018 by Institute.<br/>
+            All Rights Reserved.
+            <p id="user"></p> 
+           </div>
+           </div>
+          <div class="row"></div>
+        </div>
+</body>
+</html>

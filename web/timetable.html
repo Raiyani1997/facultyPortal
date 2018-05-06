@@ -1,0 +1,309 @@
+<html>
+<head>
+    <title>Faculty Portal</title>
+    <link rel="icon" href="photo/download.jpg" type="image/jpg"/>
+	<link rel="stylesheet" href="materialize/css/materialize.min.css">
+	<link rel="stylesheet" href="materialize/css/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	<script src="materialize/js/materialize.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	
+	<script src="js/timetable.js"></script>
+	<script src="js/test.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+    		$('.modal').modal();
+    		$('#modal1').modal('close');
+    		$('#modal2').modal('close');    		
+    		$('input.batch').autocomplete({
+    			data:{
+    				"C1":null,
+    				"C2":null,
+    				"C3":null,
+    				"C4":null,
+    				"D1":null,
+    				"D2":null,
+    				"D3":null,
+    				"D4":null,
+    			}
+    		});
+  		});
+	</script>
+	<style>
+		.col{
+			height:15%;
+			text-align:center;
+		}
+		.form1{
+			display:none;
+		}
+		.form2{
+			display:none;
+		}
+		#submit{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="modal1" class="modal modal-fixed-footer" style="width: 600px;height: 495px; padding-top: 20px; ">
+	    <div class="modal-content">
+			<div class="row"></div>
+			<div class="row">
+				<div class="col s12 center">
+		            <h5><b>Lecture</b></h5>
+		        </div>
+			</div>
+			
+			<div class="row"></div>
+
+			<div class="row">
+				<div class="col s1"></div>
+				<div class="input-field col s10">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="facname" list="facultynm" type="text" value="" class="validate faculty">
+					<label for="facname">Faculty Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s1"></div>
+				<div class="input-field col s10">
+					<i class="material-icons prefix">book</i>
+					<input id="theorysub" list="subjectnm" type="text" value="" class="validate subject">
+					<label for="theorysub">Subject Name</label>
+				</div>
+			</div>
+			<div class="row center">
+				<button class="btn waves-light" type="submit" id="action1" >Submit
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+			<div class="row"></div>
+		</div>
+	</div>
+
+	<div id="modal2" class="modal " style="width: 900px;padding-top: 30px;">
+	    <div class="modal-content">
+		
+			
+			<div class="row">
+				<div class="col s12 center">
+		            <h5><b>Laboratory</b></h5>
+		        </div>
+			</div>
+			<div class="row"></div>
+			<div class="row">
+				<div class="col s1"></div>	
+				<div class="input-field col s2">
+					<i class="material-icons prefix">featured_play_list</i>
+					<input id="labbat1"  type="text" class="validate batch">
+					<label for="labbat1">Batch1</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">book</i>
+					<input id="labsub1" list="subjectnm" type="text" class="validate">
+					<label for="labsub1">Subject1</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="facname1" type="text" list="facultynm" class="validate">
+					<label for="facname1">Faculty1</label>
+				</div>
+				<div class="input-field col s2">
+					<i class="material-icons prefix">location_on</i>
+					<input id="labloc1" type="text" list="labnm" class="validate lab">
+					<label for="labloc1">Location1</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s1"></div>	
+				<div class="input-field col s2">
+					<i class="material-icons prefix">featured_play_list</i>
+					<input id="labbat2"  type="text" class="validate batch">
+					<label for="labbat2">Batch2</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">book</i>
+					<input id="labsub2" type="text" list="subjectnm" class="validate">
+					<label for="labsub2">Subject2</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="facname2" type="text" list="facultynm" class="validate">
+					<label for="facname2">Faculty2</label>
+				</div>
+				<div class="input-field col s2">
+					<i class="material-icons prefix">location_on</i>
+					<input id="labloc2" type="text" list="labnm" class="validate lab">
+					<label for="labloc2">Location2</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s1"></div>	
+				<div class="input-field col s2">
+					<i class="material-icons prefix">featured_play_list</i>
+					<input id="labbat3"  type="text" class="validate batch">
+					<label for="labbat3">Batch3</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">book</i>
+					<input id="labsub3" type="text" list="subjectnm" class="validate">
+					<label for="labsub3">Subject3</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="facname3" type="text" list="facultynm" class="validate">
+					<label for="facname3">Faculty3</label>
+				</div>
+				<div class="input-field col s2">
+					<i class="material-icons prefix">location_on</i>
+					<input id="labloc3" type="text" list="labnm" class="validate lab">
+					<label for="labloc3">Location3</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s1"></div>	
+				<div class="input-field col s2">
+					<i class="material-icons prefix">featured_play_list</i>
+					<input id="labbat4" type="text"  class="validate batch">
+					<label for="labbat4">Batch4</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">book</i>
+					<input id="labsub4" type="text" list="subjectnm" class="validate">
+					<label for="labsub4">Subject4</label>
+				</div>
+				<div class="input-field col s3">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="facname4" type="text" list="facultynm" class="validate">
+					<label for="facname4">Faculty4</label>
+				</div>
+				<div class="input-field col s2">
+					<i class="material-icons prefix">location_on</i>
+					<input id="labloc4" type="text" list="labnm" class="validate lab">
+					<label for="labloc4">Location4</label>
+				</div>
+			</div>
+			<div class="row center">
+				<button class="btn waves-light" type="submit" id="action2">Submit
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container center" style="margin-top:30px;width:1200px;">
+		<div class="row">
+			<div class="col aa flow-text white-text red s3" id="0"><b>TIME/SEMESTER</b></div>
+			<div class="col teal flow-text s1" id="1"><b>08.30-09.30</b></div>
+			<div class="col cyan flow-text s1" id="2"><b>09.30-10.30</b></div>
+			<div class="col amber flow-text s1" id="3"><b>10.45-11.45</b></b></div>
+			<div class="col lime flow-text s1" id="4"><b>11.45-12.45</b></div>
+			<div class="col teal flow-text s1" id="5"><b>01.30-02.30</b></div>
+			<div class="col cyan flow-text s1" id="6"><b>02.30-03.30</b></div>
+			<div class="col amber flow-text s1" id="7"><b>03.30-04.30</b></div>
+			<div class="col lime flow-text s1" id="8"><b>04.30-05.30</b></div>
+		</div>
+		<div class="row">
+			<div class="col sd white-text red s3" id="10"></div>
+			<div class="col teal s1" id="11"></div>
+			<div class="col cyan s1" id="12"></div>
+			<div class="col amber s1" id="13"></div>
+			<div class="col lime s1" id="14"></div>
+			<div class="col teal s1" id="15"></div>
+			<div class="col cyan s1" id="16"></div>
+			<div class="col amber s1" id="17"></div>
+			<div class="col lime s1" id="18"></div>
+		</div>
+		<div class="row">
+			<div class="col sd white-text red s3" id="20"></div>
+			<div class="col teal s1" id="21"></div>
+			<div class="col cyan s1" id="22"></div>
+			<div class="col amber s1" id="23"></div>
+			<div class="col lime s1" id="24"></div>
+			<div class="col teal s1" id="25"></div>
+			<div class="col cyan s1" id="26"></div>
+			<div class="col amber s1" id="27"></div>
+			<div class="col lime s1" id="28"></div>
+		</div>
+		<div class="row">
+			<div class="col sd white-text red s3" id="30"></div>
+			<div class="col teal s1" id="31"></div>
+			<div class="col cyan s1" id="32"></div>
+			<div class="col amber s1" id="33"></div>
+			<div class="col lime s1" id="34"></div>
+			<div class="col teal s1" id="35"></div>
+			<div class="col cyan s1" id="36"></div>
+			<div class="col amber s1" id="37"></div>
+			<div class="col lime s1" id="38"></div>
+		</div>
+		<div class="row">
+			<div class="col sd white-text red s3" id="40"></div>
+			<div class="col teal s1" id="41"></div>
+			<div class="col cyan s1" id="42"></div>
+			<div class="col amber s1" id="43"></div>
+			<div class="col lime s1" id="44"></div>
+			<div class="col teal s1" id="45"></div>
+			<div class="col cyan s1" id="46"></div>
+			<div class="col amber s1" id="47"></div>
+			<div class="col lime s1" id="48"></div>
+		</div>
+	</div>
+	<form action="storre" method="post">
+	<input type="hidden" name="day" value=""> 
+		<input type="hidden" class="10" name="10"/>
+		<input type="hidden" class="11" name="11"/>
+		<input type="hidden" class="12" name="12"/>
+		<input type="hidden" class="13" name="13"/>
+		<input type="hidden" class="14" name="14"/>
+		<input type="hidden" class="15" name="15"/>
+		<input type="hidden" class="16" name="16"/>
+		<input type="hidden" class="17" name="17"/>
+		<input type="hidden" class="18" name="18"/>
+
+		<input type="hidden" class="20" name="20"/>
+		<input type="hidden" class="21" name="21"/>
+		<input type="hidden" class="22" name="22"/>
+		<input type="hidden" class="23" name="23"/>
+		<input type="hidden" class="24" name="24"/>
+		<input type="hidden" class="25" name="25"/>
+		<input type="hidden" class="26" name="26"/>
+		<input type="hidden" class="27" name="27"/>
+		<input type="hidden" class="28" name="28"/>
+
+		<input type="hidden" class="30" name="30"/>
+		<input type="hidden" class="31" name="31"/>
+		<input type="hidden" class="32" name="32"/>
+		<input type="hidden" class="33" name="33"/>
+		<input type="hidden" class="34" name="34"/>
+		<input type="hidden" class="35" name="35"/>
+		<input type="hidden" class="36" name="36"/>
+		<input type="hidden" class="37" name="37"/>
+		<input type="hidden" class="38" name="38"/>
+
+		<input type="hidden" class="40" name="40"/>
+		<input type="hidden" class="41" name="41"/>
+		<input type="hidden" class="42" name="42"/>
+		<input type="hidden" class="43" name="43"/>
+		<input type="hidden" class="44" name="44"/>
+		<input type="hidden" class="45" name="45"/>
+		<input type="hidden" class="46" name="46"/>
+		<input type="hidden" class="47" name="47"/>
+		<input type="hidden" class="48" name="48"/>
+
+		<div class="container center">
+			<button class="btn waves-light" type="button" id="toggle">Toggle
+				<i class="material-icons right">loop</i>
+			</button>
+			<button class="btn waves-light" type="button" id="test">Test
+				<i class="material-icons right">verified_user</i>
+			</button>
+			<button class="btn waves-light" type="submit" id="submit">Submit
+				<i class="material-icons right">save</i>
+			</button>
+		</div>
+	</form>
+</body>
+</html>
