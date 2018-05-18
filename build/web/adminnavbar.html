@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Faculty Portal</title>
+    <link rel="icon" href="photo/download.jpg" type="image/jpg"/>
+	<link rel="stylesheet" href="materialize/css/materialize.min.css"/>
+	<link rel="stylesheet" href="materialize/css/materialize.css"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<script src="js/jquery.js"></script>
+	<script src="materialize/js/materialize.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".dropdown-button").dropdown();
+			$(".dropdown-button2").dropdown();
+		});
+	</script>
+</head>
+<body>
+	<nav>
+	    <div class="nav-wrapper grey darken-3">
+	    	
+	    	<ul id="dropdown1" class="dropdown-content">
+				<li><a class="black-text" href="Profile.jsp">View Profile</a></li>
+				<li><a class="black-text" href="editprofile.jsp">Edit Profile</a></li>
+				<li><a class="black-text" href="resetpwd.jsp">change password</a></li>
+				<li class="divider"></li>
+				<li><a class="black-text" href="logout">Logout</a></li>
+			</ul>
+			<ul id="dropdown2" class="dropdown-content">
+				
+				<li><a class="black-text" href="schedule.jsp?msg=Monday">Monday</a></li>
+				<li><a class="black-text" href="schedule.jsp?msg=Tuesday">Tuesday</a></li>
+				<li><a class="black-text" href="schedule.jsp?msg=Wednesday">Wednesday</a></li>
+				<li><a class="black-text" href="schedule.jsp?msg=Thursday">Thursday</a></li>
+				<li><a class="black-text" href="schedule.jsp?msg=Friday">Friday</a></li>
+				<li><a class="black-text" href="schedule.jsp?msg=Saturday">Saturday</a></li>
+			</ul>
+	      	<ul id="nav-mobile" class="left hide-on-med-and-down">
+	        	<li><a class="white-text active" href="home.jsp" ><i class="material-icons left">home</i>Home</a></li>
+                        <li><a class="white-text" href="document.jsp">Document</a></li>
+	        	<li><a class="white-text" href="leave.jsp">Leave</a></li>
+	        	<li><a class="white-text" href="studentdetails.jsp">Student_details</a></li>
+	        	<li><a class="white-text" href="workload.jsp">WorkLoad</a></li>
+	        	<li><a class="white-text" href="Blogs.jsp">Blogs</a></li>
+	        	<li><a class="white-text dropdown-button2" style="width: 120px;" href="#" data-activates="dropdown2">Schedule</a></li>
+	      	</ul>
+	      	<a class="dropdown-button right" style="width:170px;" href="#!" data-activates="dropdown1"><div id="dmenu" class="right tag">Account<i class="material-icons right">arrow_drop_down</i></div></a>
+    	</div>
+  	</nav>
+</body>
+</html>

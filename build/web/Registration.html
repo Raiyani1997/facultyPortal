@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Faculty Portal</title>
+    <link rel="icon" href="photo/download.jpg" type="image/jpg"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<link rel="stylesheet" href="materialize/css/materialize.min.css"/>
+	<link rel="stylesheet" href="materialize/css/materialize.css"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<script src="js/jquery.js"></script>
+	<script src="materialize/js/materialize.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.datepicker').pickadate({
+			selectMonths: true, // Creates a dropdown to control month
+			selectYears: 25, // Creates a dropdown of 15 years to control year,
+			today: 'Today',
+			clear: 'Clear',
+			close: 'Ok',
+			closeOnSelect: false // Close upon selecting a date,
+			});
+			$('select').material_select();
+        });
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="#f5f5f5 grey lighten-4">
+	
+	<div class="row">
+		<div class="col s7 center" style="padding-left:50px;"><a style="color:green" href="index.html">ClickHere!!!!</a>If alraedy registered.</div> 
+	</div>
+	
+	<form action="registration" id="registartiform" method="post">
+    	<div class=" center container form1" style="width:800px;">
+			<div class="row center"></div>
+			<div class="row center"><h4>Register</h4></div>
+			<div class="row s12 grey darken-1 white-text" style="padding-left:20px;"><p>Fill the form:</p></div>
+			<div class="row">
+				
+				<div class="input-field col s4">
+					<i class="material-icons prefix">account_circle</i>
+                                        <input id="fnm" name="fnm" type="text" class="validate" maxlength="12" required/>
+					<label for="fnm">First Name</label>
+				</div>
+				
+				<div class="input-field col s4">
+                                    <input id="mnm" name="mnm" type="text" class="validate" maxlength="12" required/>
+					<label for="mnm">Middle Name</label>
+				</div>
+				<div class="input-field col s4">
+                                    <input id="lnm" name="lnm" type="text" class="validate" maxlength="12" required/>
+					<label for="lnm">Last Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">contact_phone</i>
+                                        <input id="mob" name="mob" type="text" pattern="[987]{1}[0-9]{9}" class="validate" maxlength="10" required/>
+					<label for="mob">Contact No.</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">email</i>
+                                        <input id="mail" name="mail" type="text" class="validate" pattern="^([a-zA-Z0-9_\-\.]+)@((gmail.com)|(yahoo.com))$" maxlength="30" required/>
+					<label for="mail">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">date_range</i>
+					<input id="dob" name="dob" type="text" class="datepicker" >
+					<label for="dob">Birth Date</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">store</i>
+					<input id="quali" name="quali" type="text" class="validate" required>
+					<label for="quali">Qualification</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">subject</i>
+					<input id="spec" name="spec" type="text" class="validate">
+					<label for="spec">Specialization</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">view_week</i>
+                                        <input id="exp" name="exp" type="text" class="validate" pattern="[0-9]{0,2}" required/>
+					<label for="exp">Experiance</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s6">
+					<select id="sq" name="sq">
+						<option value="" disabled selected>Security Question</option>
+						<option value="1">Your_Birth_Place</option>
+						<option value="2">Favorite_Color</option>
+						<option value="3">Favorite_Book</option>
+					</select>
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">date_range</i>
+					<input id="ans" name="ans" type="text" class="validate">
+					<label for="ans">Answer</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">vpn_key</i>
+                                        <input id="pwd" name="pwd" type="password" class="validate" maxlength="10" required/>
+					<label for="pwd">Password</label>
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">vpn_key</i>
+                                        <input id="cpwd" name="cpwd" type="password" class="validate" maxlength="10" required/>
+					<label for="cpwd">Conform Password</label>
+				</div>
+			</div>
+			
+			<button class="btn waves-effect waves-light grey darken-3" id="submit" type="submit" name="action">Register
+				<i class="material-icons right">send</i>
+			</button>
+			<div class="row"></div>
+			<div class="row"></div>
+		</div>
+    </form>
+</body>
+</html>
